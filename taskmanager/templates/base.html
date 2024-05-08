@@ -7,32 +7,32 @@
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     <title>Task Manager</title>
 </head>
 <body>
 
-    <header>
-        <!-- top navbar -->
-        <nav class="light-blue darken-1"
-            <div class="nav-wrapper">
-              <a href="{{ url_for('home')}}" class="brand-logo">Task Manager</a>
-              <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
-              <ul class="right hide-on-med-and-down">
-                <li><a href="{{ url_for('home')}}">Home</a></li>
-                <li><a href="">New Task</a></li>
-                <li><a href="">Categories</a></li>
-              </ul>
-            </div>
-          </nav>
-        
-          <!-- mobile sidenav -->
-          <ul class="sidenav" id="mobile-demo">
-            <li><a href="{{ url_for('home')}}">Home</a></li>
+  <header>
+    <!-- top navbar -->
+    <nav class="light-blue darken-1">
+        <div class="nav-wrapper">
+        <a href="{{ url_for('home') }}" class="brand-logo">Task Manager</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
             <li><a href="">New Task</a></li>
             <li><a href="">Categories</a></li>
-          </ul>
-    </header>
+        </ul>
+        </div>
+    </nav>
+
+    <!-- mobile sidenav -->
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="">New Task</a></li>
+        <li><a href="">Categories</a></li>
+    </ul>
+</header>
 
     <main class="container">
         {% block content %}
